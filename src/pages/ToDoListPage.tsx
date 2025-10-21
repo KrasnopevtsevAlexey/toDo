@@ -16,21 +16,20 @@ export const ToDoListPage = () => {
     setTodos([...todos, newToDo]);
   };
 
-  const updateToDo = (ToDoItem: ToDo)=>{
-    const newTodos = todos.map((todo)=>{
-if(todo.id === ToDoItem.id){
-  todo.isDone = !todo.isDone;
-}
-return todo
-    })
-setTodos(newTodos);
-  }
+  const updateToDo = (ToDoItem: ToDo) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === ToDoItem.id) {
+        todo.isDone = !todo.isDone;
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
 
-  const deleteToDo = (ToDoItem: ToDo)=>{
-const newTodos = todos.filter((todos)=> todos.id !== ToDoItem.id)
-setTodos(newTodos);
-  }
-
+  const deleteToDo = (ToDoItem: ToDo) => {
+    const newTodos = todos.filter((todos) => todos.id !== ToDoItem.id);
+    setTodos(newTodos);
+  };
 
   return (
     <>
@@ -38,7 +37,7 @@ setTodos(newTodos);
 
       <Form createNewToDo={createNewToDo} />
 
-      <ToDoList todos={todos} deleteToDo={deleteToDo} updateToDo={updateToDo}/>
+      <ToDoList todos={todos} deleteToDo={deleteToDo} updateToDo={updateToDo} />
     </>
   );
 };
