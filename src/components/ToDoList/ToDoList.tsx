@@ -1,5 +1,7 @@
 import { ToDoListListItem } from "./ToDoListItem/ToDoListItem";
 import "./ToDoList.scss";
+
+import classes from "./ToDoList.module.scss"
 import { ToDo } from "../../modules/todo-item";
 
 export const ToDoList = (props: {
@@ -39,10 +41,10 @@ export const ToDoList = (props: {
 
   return (
     <>
-      <div className="todo-container">
-        <ul className="todo-list failed">{checkList()}</ul>
+      <div className={classes.container}>
+        <ul className={`${classes.todolist} ${classes.failed}`}>{checkList()}</ul>
 
-        <ul className="todo-list completed">{uncheckList()}</ul>
+        <ul className={`${classes.todolist} ${classes.completed} `}>{uncheckList()}</ul>
       </div>
     </>
   );

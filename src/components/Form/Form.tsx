@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Form.scss";
+import classes from "./Form.module.scss"
 
 export const Form = (props: { createNewToDo: Function }) => {
   const [text, setText] = useState<string>("");
@@ -13,7 +14,7 @@ export const Form = (props: { createNewToDo: Function }) => {
 
   return (
     <>
-      <div className="form-wrapper">
+      <div className={classes.formwrapper}>
         <form action="#" onSubmit={onSubmit}>
           <label>
             <input

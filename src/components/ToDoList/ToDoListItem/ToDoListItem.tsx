@@ -1,5 +1,6 @@
 import { ToDo } from "../../../modules/todo-item";
 import "./ToDoListItem.scss";
+import classes from "./ToDoListItem.module.scss";
 
 export const ToDoListListItem = (props: {
   ToDoItem: ToDo;
@@ -8,15 +9,17 @@ export const ToDoListListItem = (props: {
 }) => {
   return (
     <>
-      <li className="todo-list-item__wrapper">
+      <li className={classes.todolistitem__wrapper}>
         <span>{props.ToDoItem.text}</span>
-        <div className="todo-list-item__buttons">
+        <div className={classes.todolistitem__buttons}>
           <button
-            className="btn-trash"
+            className={classes.btntrash}
             onClick={() => props.deleteToDo(props.ToDoItem)}
           ></button>
           <button
-            className={props.ToDoItem.isDone ? "btn-check" : "btn-uncheck"}
+            className={
+              props.ToDoItem.isDone ? classes.btncheck : classes.btnuncheck
+            }
             onClick={() => props.updateToDo(props.ToDoItem)}
           ></button>
         </div>
