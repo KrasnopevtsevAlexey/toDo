@@ -11,8 +11,8 @@ return isActive ? `${classes.active} ${classes.link}` : classes.link ;
          <header className={classes.header}>
         <div className={classes.container}>
 
-            <NavLink className={getClassLink} to="/">Home</NavLink>
-            <NavLink className={getClassLink} to="/todo">ToDo</NavLink>
+            <NavLink className={getClassLink} to="/">ToDo</NavLink>
+            <NavLink className={getClassLink} to="/list">List</NavLink>
             {/* <a href="/" >Home</a>
              <a href="/todo" >ToDo</a> */}
         </div>
