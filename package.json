@@ -13,7 +13,7 @@
     
   },
 
-  "homepage": "https://github.com/KrasnopevtsevAlexey/toDo",
+ 
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.2",
     "@types/jest": "^30.0.0",
@@ -43,5 +43,7 @@
     "globals": "^16.4.0",
     "sass": "^1.93.2",
     "vite": "^7.1.7"
-  }
-}
+  },
+"homepage": "https://github.com/KrasnopevtsevAlexey/toDo/"
+
+  } 
