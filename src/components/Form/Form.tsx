@@ -1,6 +1,4 @@
 import { useState } from "react";
-import "./Form.scss";
-import classes from "./Form.module.scss"
 import { FormButton, FormBlock, FormField, FormLabel, FormWrapper } from "./Form.styled";
 import plusIcon from '../../assets/images/plus.png'
 
