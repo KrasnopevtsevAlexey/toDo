@@ -35,7 +35,7 @@ export const ToDoItemButton = styled.div`
   right: 0;
 `;
 
-export const ToDoItemControl = styled.button<{icon: string}>`
+export const ToDoItemControl = styled.button<{$icon: string}>`
   width: 50px;
   height: 50px;
   background-color: transparent;
@@ -46,7 +46,7 @@ export const ToDoItemControl = styled.button<{icon: string}>`
   box-shadow: none;
   outline: none;
   cursor: pointer;
-background-image: url(${(props)=> props.icon});
+background-image: url(${(props)=> props.$icon});
 
   &:last-of-type:before {
     content: "";

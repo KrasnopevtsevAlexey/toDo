@@ -1,6 +1,6 @@
 import { ToDo } from "../../../modules/todo-item";
-import "./ToDoListItem.scss";
-import classes from "./ToDoListItem.module.scss";
+
+
 import { ToDoItem, ToDoItemButton, ToDoItemControl, ToDoItemText } from "./ToDoListItem.styled";
 
 import checkIcon from "../../../assets/images/check.png"
@@ -20,7 +20,7 @@ export const ToDoListListItem = (props: {
 
           <ToDoItemControl
             // className={classes.btntrash}
-             icon={trashIcon}
+             $icon={trashIcon}
             onClick={() => props.deleteToDo(props.ToDoItem)}
           ></ToDoItemControl>
           <ToDoItemControl
@@ -28,7 +28,7 @@ export const ToDoListListItem = (props: {
             //   props.ToDoItem.isDone ? classes.btncheck : classes.btnuncheck
             // }
 
-            icon={props.ToDoItem.isDone ? checkIcon : uncheckIcon}
+            $icon={props.ToDoItem.isDone ? checkIcon : uncheckIcon}
             onClick={() => props.updateToDo(props.ToDoItem)}
           ></ToDoItemControl>
         </ToDoItemButton>

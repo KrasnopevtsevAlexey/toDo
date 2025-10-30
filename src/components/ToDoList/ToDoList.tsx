@@ -3,6 +3,9 @@ import "./ToDoList.scss";
 
 import classes from "./ToDoList.module.scss"
 import { ToDo } from "../../modules/todo-item";
+import { ToDoContainer } from "./ToDoList.styled";
+import { ToDoListt } from "./ToDoList.styled";
+import { ToDoListComplied } from "./ToDoList.styled";
 
 export const ToDoList = (props: {
   todos: ToDo[];
@@ -41,11 +44,11 @@ export const ToDoList = (props: {
 
   return (
     <>
-      <div className={classes.container}>
-        <ul className={`${classes.todolist} ${classes.failed}`}>{checkList()}</ul>
+      <ToDoContainer>
+         <ToDoListComplied >{checkList()}</ToDoListComplied >
 
-        <ul className={`${classes.todolist} ${classes.completed} `}>{uncheckList()}</ul>
-      </div>
+        <ToDoListt>{uncheckList()}</ToDoListt>
+      </ToDoContainer>
     </>
   );
 };
