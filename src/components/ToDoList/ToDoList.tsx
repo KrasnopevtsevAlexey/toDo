@@ -1,7 +1,4 @@
 import { ToDoListListItem } from "./ToDoListItem/ToDoListItem";
-import "./ToDoList.scss";
-
-import classes from "./ToDoList.module.scss"
 import { ToDo } from "../../modules/todo-item";
 import { ToDoContainer } from "./ToDoList.styled";
 import { ToDoListt } from "./ToDoList.styled";
